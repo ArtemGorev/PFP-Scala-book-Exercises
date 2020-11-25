@@ -5,9 +5,8 @@ import io.estatico.newtype.macros._
 object NewTypeApp extends App {
   val helloWorld = "HelloWorld"
 
-  def lookup(username: Username, email: Email): Boolean = {
+  def lookup(username: Username, email: Email): Boolean =
     !(username.value.isEmpty || email.value.isEmpty)
-  }
 
   @newtype case class Username(value: String)
 
